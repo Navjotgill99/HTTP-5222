@@ -1,0 +1,37 @@
+extends layout
+
+block layout-content 
+    .main-content 
+        p.p1 Welcome to JewelCraze!
+        p.p2 Discover the elegance of fine jewelry with JewelCraze, your premier destination for exquisite pieces that elevate every moment.
+
+        //img url:https://images.squarespace-cdn.com/content/v1/54643542e4b0097b957d6418/1626864625140-YBPGD2IRIPLUXJGFRCTM/Jewelry+Photo+3
+        img#img1(src="/images/main.jpeg", alt="necklace")
+
+        p.p2 Discover a world of timeless beauty with our diverse range of jewelry, including stunning rings, necklaces, earrings, and bracelets. From classic designs to modern interpretations, our collections cater to every taste and occasion, ensuring you find the perfect piece to complement your individual style.
+        p.p3 Explore Our Collections:
+        #container
+            .item
+                //img url: https://th.bing.com/th/id/OIP.REGegd1t5_j_j3W_4FaDjgHaHa?rs=1&pid=ImgDetMain
+                img(src="/images/ring.jpeg" alt="ring")
+                button.button 
+                    a(href="#") Rings
+            .item 
+                //img url: https://www.warrenjames.co.uk/_assets/images/products/images_grey/1000/SPEN513.jpg
+                img(src="/images/pendant.jpeg" alt="pendant")
+                button.button 
+                    a(href="#") Pendants
+            .item 
+                //img url: https://th.bing.com/th/id/OIP.FolSr0bQtJ-y0YfcAHoVDQAAAA?rs=1&pid=ImgDetMain
+                img(src="/images/bracelet.jpeg" alt="bracelet")
+                button.button 
+                    a(href="#") Bracelets
+        p.p2 Need assistance in finding the perfect piece or have specific customization requests? Our team of jewelry experts is here to provide personalized consultations and guidance every step of the way. Elevate your gifting experience with our luxurious gift wrapping service, ensuring that every package is presented with the utmost care and attention to detail.
+    
+        form#form-container(action="#")
+            p.p3 Subscribe to Our Newsletter
+            p.p2 Stay updated with the latest trends and exclusive offers by subscribing to our newsletter.
+            p.subscribe
+                label(for="email") Email:
+                input(type="email", id="email", name="email", placeholder="Enter your email", required)
+                button.submit(type="submit") Subscribe
