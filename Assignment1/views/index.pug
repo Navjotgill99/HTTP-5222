@@ -1,0 +1,111 @@
+extends common/layout
+
+block layout-content
+  .main-content
+    h1.page-title Welcome to Book Haven
+    p.p1 Whether you're a seasoned bibliophile or just starting your literary journey, Book Haven is your one-stop shop for a vast and curated selection of books. We offer a welcoming atmosphere to browse the shelves, discover hidden gems, and lose yourself in the magic of stories.
+
+    .search-bar
+      form(action='#', method='#')
+        input(type='text', placeholder='Search for books...')
+        button.button(type='submit') Search
+    
+    //img url: https://th.bing.com/th/id/OIP.hZDQv_lHOLHGDSJcObIybQHaEo?rs=1&pid=ImgDetMain
+    img#img1(src="/img/books.jpg", alt="Books")
+
+    p.p3 Explore Our Collections
+    p.p2 Fictional Books:
+
+    #container
+      .item
+        //img url: https://i.pinimg.com/564x/f7/c8/12/f7c812c9b0296cd9f119e33a06d9a256.jpg
+        img#img(src="/img/fiction1.jpeg", alt="The Past is rising book")
+        p.title The Past is Rising 
+        p.description A thrilling tale of mystery and adventure.
+        p.price $19.99
+        button.button 
+          a(href="#") Buy Now
+      .item 
+        //img url: https://i.pinimg.com/originals/5a/f3/1c/5af31ca12c0b5c926fd1f2361cf4777a.jpg
+        img#img(src="/img/fiction2.jpeg", alt="Outer space book")
+        p.title Outer Space
+        p.description Explore the wonders of the universe.
+        p.price $24.99
+        button.button
+          a(href="#") Buy Now
+      .item 
+        //img url: https://th.bing.com/th/id/R.c5515093295b0b8ff8a5668c9b9fcc27?rik=xzcytdH%2fvhjtkw&pid=ImgRaw&r=0
+        img#img(src="/img/fiction3.jpeg", alt="The lives we lost book")
+        p.title The Lives We Lost
+        p.description A poignant story of loss and hope.
+        p.price $18.99
+        button.button 
+          a(href="#") Buy Now
+    
+    p.p2 Non-Fictional Books:
+    #container
+      .item
+        //img url: https://th.bing.com/th/id/OIP.I281GISWKaZNPsbRDqs2ZgHaLH?w=182&h=273&c=7&r=0&o=5&dpr=1.3&pid=1.7
+        img#img(src="/img/nonfiction1.jpg", alt="Queen of the world book")
+        p.title Queen of the World
+        p.description An inspiring biography of a remarkable leader.
+        p.price $22.99
+        button.button 
+          a(href="#") Buy Now
+      .item 
+        //img url: https://th.bing.com/th/id/OIP.5bDe_V9_THTag3ZNnBDgfAHaLQ?w=182&h=278&c=7&r=0&o=5&dpr=1.3&pid=1.7
+        img#img(src="/img/nonfiction2.jpeg", alt="The first conspiracy book")
+        p.title The First Conspiracy
+        p.description Uncover the hidden truths of history.
+        p.price $21.99
+        button.button
+          a(href="#") Buy Now
+      .item 
+        //img url: https://m.media-amazon.com/images/I/614TjLCvXyL._SL1200_.jpg
+        img#img(src="/img/nonfiction3.jpg", alt="Omnivore's Dilemma book")
+        p.title Omnivore's Dilemma
+        p.description A deep dive into the complexities of food choices.
+        p.price $20.99
+        button.button 
+          a(href="#") Buy Now
+
+    p.p2 Children's Books:
+    #container
+      .item
+        //img url: https://images.bookoutlet.com/covers/large/isbn978168/9781680101362-l.jpg
+        img#img(src="/img/children1.jpeg", alt="Little Mermaid book")
+        p.title Little Mermaid
+        p.description A classic tale for children of all ages.
+        p.price $14.99
+        button.button 
+          a(href="#") Buy Now
+      .item 
+        //img url: https://alquilercastilloshinchables.info/wp-content/uploads/2020/06/Story-Book-for-Kids-Moral-Stories-English-The-Clever-Fox-and-....jpg
+        img#img(src="/img/children2.jpeg", alt="The Clever Fox book")
+        p.title The Clever Fox
+        p.description A fun and educational story.
+        p.price $12.99
+        button.button
+          a(href="#") Buy Now
+      .item 
+        //img url: https://th.bing.com/th/id/OIP.IzJYpIaQcQMGMoVwj6n0uAHaKL?w=153&h=210&c=7&r=0&o=5&dpr=1.3&pid=1.7
+        img#img(src="/img/children3.jpeg", alt="The uncle Wiggily book")
+        p.title The Uncle Wiggly
+        p.description Adventures of the beloved rabbit.
+        p.price $16.99
+        button.button 
+          a(href="#") Buy Now
+    
+    .newsletter 
+      h2 Subscribe to Our Newsletter 
+      p stay updated with the latest book releases and promotions.
+      form(action='#', method='#')
+        input(type="email", name="email", placeholder="Enter your email")
+        button.button(type="submit") Subscribe
+    
+    .reviews
+      h2 What Our Readers Say
+      .review
+        p "Book Haven is my favorite place to find new books!" - Alice
+      .review
+        p "Great collection and excellent customer service!" - Bob
