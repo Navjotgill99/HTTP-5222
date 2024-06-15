@@ -35,7 +35,7 @@ app.get("/books", async (request, response) => {
   response.render("books", { books: bookList });
 });
 
-app.get("/about", (request, response) => {
+app.get("/about", async (request, response) => {
   response.render("about");
 });
 
@@ -47,9 +47,9 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.post("/books/add", async (reequest, response) => {
-  const { title, author, year, price } = request.body;
-  await db.addBook(title, author, year, price);
+app.post("/books/add", async (request, response) => {
+  const { title, author, year, price, image } = request.body;
+  await db.addBook(title, author, year, price, image);
   response.redirect("/books");
 });
 

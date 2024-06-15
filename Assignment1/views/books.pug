@@ -3,27 +3,29 @@ extends common/layout
 block layout-content
   .main-content
     h1.page-title Our Books
+
+    .search-bar
+      form(action='#', method='#')
+        input(type='text', placeholder='Search for books...')
+        button.button(type='submit') Search
     ul
       each book in books
-        li
+        div
           h2 #{book.title}
           p Author: #{book.author}
           p Year: #{book.year}
-          p Genre: #{book.genre}
-          //
-          img
-    h2 Add a new book
-    form(action='/books/add', method='POST')
-      label(for='title') Title:
-      input(type='text', name='title', id='title')
-      br
-      label(for='author') Author:
-      input(type='text', name='author', id='author')
-      br
-      label(for='year') Year:
-      input(type='number', name='year', id='year')
-      br
-      label(for='genre') Genre:
-      input(type='text', name='genre', id='genre')
-      br
-      button(type='submit') Add Book
+          p Price: #{book.price}
+          a.button(href="/books") Buy Now
+
+    .add
+      h1.page-title Add a new book
+      form(action="/books/add", method="POST")
+        label(for="title") Title:
+        input(type="text",name="title", id="title")
+        label(for="author") Author:
+        input(type="text" name="author", id="author")
+        label(for="year") Year:
+        input(type="number", name="year", id="year")
+        label(for="price") Price:
+        input(type="number", name="price", id="price")
+        button.button(type="submit") Add Book

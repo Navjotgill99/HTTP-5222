@@ -41,7 +41,7 @@ a:hover {
 }
 
 .p1 {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
   margin: 0;
 }
@@ -72,6 +72,17 @@ a:hover {
 
 main {
   padding: 20px;
+}
+
+.view{
+  text-decoration: underline;
+  color: #000;
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #container {
@@ -142,13 +153,45 @@ main {
 }
 
 .contact-us {
-  margin-bottom: 50px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #000;
+}
+
+.contact-us p {
+  margin-bottom: 15px;
+  color: #555;
 }
 
 .contact-us p.address {
-  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
 }
 
+.contact-us p.phone {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.contact-us p.email {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.contact-us p.address::before {
+  content: "📍 ";
+}
+
+.contact-us p.phone::before {
+  content: "📞 ";
+}
+
+.contact-us p.email::before {
+  content: "✉️ ";
+}
 
 .button {
   height: 40px;
@@ -205,6 +248,30 @@ main {
   font-size: 16px;
   color: #666;
   margin: 10px 0;
+}
+
+.add {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #000;
+}
+
+ul div {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+ul div img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 footer {
