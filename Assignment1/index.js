@@ -40,7 +40,7 @@ app.get("/about", async (request, response) => {
 });
 
 app.get("/books/add", (request, response) => {
-  response.redirect("add");
+  response.render("add");
 });
 
 const bodyParser = require('body-parser');

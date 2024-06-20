@@ -105,6 +105,11 @@ main {
   object-fit: cover;
 }
 
+.img2{
+  height:300px;
+  width:250px;
+}
+
 .title {
   font-size: 20px;
   font-weight: bold;

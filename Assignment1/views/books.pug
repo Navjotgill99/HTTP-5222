@@ -12,20 +12,8 @@ block layout-content
       each book in books
         div
           h2 #{book.title}
+          img.img2(src=book.image, alt=book.title)
           p Author: #{book.author}
           p Year: #{book.year}
           p Price: #{book.price}
           a.button(href="/books") Buy Now
-
-    .add
-      h1.page-title Add a new book
-      form(action="/books/add", method="POST")
-        label(for="title") Title:
-        input(type="text",name="title", id="title")
-        label(for="author") Author:
-        input(type="text" name="author", id="author")
-        label(for="year") Year:
-        input(type="number", name="year", id="year")
-        label(for="price") Price:
-        input(type="number", name="price", id="price")
-        button.button(type="submit") Add Book

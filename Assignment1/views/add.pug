@@ -1,0 +1,18 @@
+extends common/layout
+
+block layout-content
+  .main-content
+    .add
+        h1.page-title Add a new book
+        form(action="/books/add", method="POST")
+            label(for="title") Title:
+            input(type="text",name="title", id="title")
+            label(for="image") Image:
+            input(type="url",name="image", id="image")
+            label(for="author") Author:
+            input(type="text" name="author", id="author")
+            label(for="year") Year:
+            input(type="number", name="year", id="year")
+            label(for="price") Price:
+            input(type="number", name="price", step="0.01", id="price")
+            button.button(type="submit") Add Book
