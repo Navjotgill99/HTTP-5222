@@ -27,7 +27,7 @@ app.get("/", async (request, response) => {
     await db.initializeBooks(); //load data into books
     bookList = await db.getBooks();
   }
-  response.render("index", { books: bookList });
+  response.render("index", { books: bookList });// Render the index page with the list of books
 });
 
 app.get("/books", async (request, response) => {
@@ -36,21 +36,21 @@ app.get("/books", async (request, response) => {
 });
 
 app.get("/about", async (request, response) => {
-  response.render("about");
+  response.render("about");// Render the about page
 });
 
 app.get("/books/add", (request, response) => {
-  response.render("add");
+  response.render("add");// Render the add book page
 });
 
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');// Import body-parser to parse request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // Parse JSON bodies
 
 app.post("/books/add", async (request, response) => {
   const { title, author, year, price, image } = request.body;
-  await db.addBook(title, author, year, price, image);
-  response.redirect("/books");
+  await db.addBook(title, author, year, price, image);// Add a new book to the database
+  response.redirect("/books");// Redirect to the books page
 });
 
 //set up server listening

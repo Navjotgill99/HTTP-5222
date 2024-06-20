@@ -1,8 +1,10 @@
+/* General body styling */
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
 }
 
+/* Header styling */
 header {
   background-color: #727272;
   padding-left: 20px;
@@ -13,16 +15,19 @@ header {
   color: #fff;
 }
 
+/* Heading styles */
 h1, h2 {
   color: #333;
 }
 
+/* Menu styling */
 #menu {
   display: flex;
   column-gap: 1em;
   list-style: none;
 }
 
+/* Link styling */
 a {
   color: #fff;
   text-decoration: none;
@@ -32,14 +37,17 @@ a:hover {
   color: #000;
 }
 
+/* Page title styling */
 .page-title{
   text-align: center;
 }
 
+/* Image styling */
 #img1 {
   width: 100%;
 }
 
+/* Paragraph styles */
 .p1 {
   font-size: 18px;
   text-align: center;
@@ -59,6 +67,7 @@ a:hover {
   margin: 0;
 }
 
+/* Search bar styling */
 .search-bar {
   text-align: center;
   margin: 20px 0;
@@ -70,6 +79,7 @@ a:hover {
   font-size: 16px;
 }
 
+/* Main content styling */
 main {
   padding: 20px;
 }
@@ -79,12 +89,14 @@ main {
   color: #000;
 }
 
+/* Heading section styling */
 .heading{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* Container for flexbox items */
 #container {
   display: flex;
   justify-content: space-evenly;
@@ -92,6 +104,7 @@ main {
   flex-wrap: wrap;
 }
 
+/* Item styling */
 .item {
   display: flex;
   flex-direction: column;
@@ -106,28 +119,32 @@ main {
 }
 
 .img2{
-  height:300px;
-  width:250px;
+  max-height:300px;
+  max-width:250px;
 }
 
+/* Title styling */
 .title {
   font-size: 20px;
   font-weight: bold;
   margin-top: 10px;
 }
 
+/* Description styling */
 .description {
   font-size: 14px;
   color: #555;
   text-align: center;
 }
 
+/* Price styling */
 .price {
   font-size: 18px;
   color: #000;
   margin-top: 5px;
 }
 
+/* About us section styling */
 .about-us {
   padding: 20px;
 }
@@ -142,10 +159,12 @@ main {
   line-height: 1.5;
 }
 
+/* Mission statement styling */
 .mission-statement {
   margin-bottom: 30px;
 }
 
+/* Team section styling */
 .team {
   display: flex;
   flex-wrap: wrap;
@@ -157,6 +176,7 @@ main {
   text-align: center;
 }
 
+/* Contact us section styling */
 .contact-us {
   text-align: center;
   background-color: #fff;
@@ -198,6 +218,7 @@ main {
   content: "✉️ ";
 }
 
+/* Button styling */
 .button {
   height: 40px;
   width: 170px;
@@ -215,6 +236,7 @@ main {
   background-color: #9caf88;
 }
 
+/* Newsletter section styling */
 .newsletter {
   text-align: center;
   background-color: #fff;
@@ -235,6 +257,7 @@ main {
   font-size: 16px;
 }
 
+/* Reviews section styling */
 .reviews {
   text-align: center;
   background-color: #fff;
@@ -255,6 +278,7 @@ main {
   margin: 10px 0;
 }
 
+/* Add section styling */
 .add {
   text-align: center;
   background-color: #fff;
@@ -264,6 +288,7 @@ main {
   box-shadow: 0 4px 8px #000;
 }
 
+/* List item div styling */
 ul div {
   margin-bottom: 20px;
   padding: 15px;
@@ -279,6 +304,7 @@ ul div img {
   margin-bottom: 10px;
 }
 
+/* Footer styling */
 footer {
   background-color: #727272;
   color: #ffffff;

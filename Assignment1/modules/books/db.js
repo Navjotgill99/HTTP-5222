@@ -1,8 +1,9 @@
-const mongoose = require("mongoose"); //import Mongoose
+const mongoose = require("mongoose"); //Import Mongoose for MongoDB interactions
 
+// Construct MongoDB connection URL using environment variables for user, password, and host
 const dbUrl = `mongodb+srv://${process.env.DBUSER}:${process.env.DBPWD}@${process.env.DBHOST}`;
 
-//set up Schema and model
+// Set up Schema and model for 'Book'
 const bookSchema = new mongoose.Schema({
   title: String,
   author: String,
@@ -10,9 +11,11 @@ const bookSchema = new mongoose.Schema({
   price: Number,
   image: String
 });
-const Book = mongoose.model("Book", bookSchema);
+const Book = mongoose.model("Book", bookSchema); // Create the 'Book' model based on the schema
 
 //MONGODB FUNCTIONS
+
+// Connect to MongoDB using Mongoose
 async function connect() {
   await mongoose.connect(dbUrl); //connect to mongodb
 }
@@ -96,7 +99,7 @@ async function initializeBooks() {
       image: 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781625583826/brothers-karamazov-9781625583826_hr.jpg'
     }
   ];
-  await Book.insertMany(bookList);
+  await Book.insertMany(bookList); // Insert the predefined book list into the database
   console.log(bookList);
 }
 
@@ -110,10 +113,11 @@ async function addBook(title, author, year, price, image) {
     price,
     image
   });
-  await newBook.save();
+  await newBook.save(); // Save the new book document to the database
   console.log("New book added: ", newBook);
 }
 
+// Export the functions to be used in other modules
 module.exports = {
   getBooks,
   initializeBooks,
